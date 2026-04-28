@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apu's Journey - Playtest</title>
+  <link rel="icon" type="image/png" href="MISC/icon.png">
+  <style>
+    :root {
+      --bg: #181d16;
+      --card: #1f261d;
+      --text: #f9FFF0;
+      --muted: #a7a7b3;
+      --accent: #7a8272;
+      --accent2: #7a8272;
+      --danger: #ef4444;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: var(--muted);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: white;
+      display: inline-block;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .primary {
+      background: var(--accent);
+    }
+
+    .secondary {
+      background: var(--accent2);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .amulet {
+      background: #181d16;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #333c2e;
+    }
+
+    .amulet h3 {
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+    }
+
+    .amulet p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .builds ul {
+      margin-top: 10px;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Apu's Journey - Playtest</h1>
+<img src="MISC/cover.png" alt="Apu's Journey Cover"
+style="width:100%; max-height:420px; object-fit:cover; object-position: center 75%; border-radius:14px; margin-bottom:20px;" />
+    <p>Obrigado por participar dos testes! Seu feedback é essencial para o balanceamento do jogo.</p>
+  </header>
+
+  <div class="container">
+
+    <!-- LINKS -->
+    <div class="card">
+      <h2>Links Importantes</h2>
+      <div class="buttons">
+        <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLScc_59MlVJKSg4I9SBo63qxfp8_DzTbZEncan3LKyOKzKmhqQ/viewform?usp=header" target="_blank">Responder Formulário</a>
+        <a class="btn secondary" href="https://mega.nz/file/3YRClYDD#uYQcwUkOOkbsR52THN1v7LGA1GsGW6TFSLDiC4DIoe0" target="_blank">Baixar Demo</a>
+      </div>
+    </div>
+
+    <!-- AMULETOS -->
+    <div class="card">
+      <h2>Amuletos</h2>
+      <div class="grid">
+
+        <div class="amulet">
+<img src="MISC/am1.png" alt="Amuleto"
+style="width:72px; height:72px; object-fit:contain; border-radius:10px; margin: 0 auto 10px auto; display:block;" />
+
+  <h3>Primavera Interna</h3>
+  <p><strong>Custo:</strong>2 BP</p>
+  <p><strong>Efeito:</strong> Aumenta a vida máxima em 2 pontos.</p>
+</div>
+
+               <div class="amulet">
+<img src="MISC/am2.png" alt="Amuleto"
+style="width:72px; height:72px; object-fit:contain; border-radius:10px; margin: 0 auto 10px auto; display:block;" />
+
+  <h3>Corte Absoluto</h3>
+  <p><strong>Custo:</strong>3 BP</p>
+  <p><strong>Efeito:</strong> Aumenta o dano dos golpes.</p>
+</div>
+
+               <div class="amulet">
+<img src="MISC/am3.png" alt="Amuleto"
+style="width:72px; height:72px; object-fit:contain; border-radius:10px; margin: 0 auto 10px auto; display:block;" />
+
+  <h3>Dança Rápida</h3>
+  <p><strong>Custo:</strong>3 BP</p>
+  <p><strong>Efeito:</strong> Aumenta a velocidade de movimento.</p>
+</div>
+
+               <div class="amulet">
+<img src="MISC/am4.png" alt="Amuleto"
+style="width:72px; height:72px; object-fit:contain; border-radius:10px; margin: 0 auto 10px auto; display:block;" />
+
+  <h3>Fortuna Velada</h3>
+  <p><strong>Custo:</strong>1 BP</p>
+  <p><strong>Efeito:</strong> Melhora a qualidade dos itens deixados por inimigos e objetos.</p>
+</div>
+
+               <div class="amulet">
+<img src="MISC/am5.png" alt="Amuleto"
+style="width:72px; height:72px; object-fit:contain; border-radius:10px; margin: 0 auto 10px auto; display:block;" />
+
+  <h3>Presa de Carmilla</h3>
+  <p><strong>Custo:</strong>3 BP</p>
+  <p><strong>Efeito:</strong> Inimigos derrotados frequentemente liberam energia vital.</p>
+</div>
+
+
+               <div class="amulet">
+<img src="MISC/am6.png" alt="Amuleto"
+style="width:72px; height:72px; object-fit:contain; border-radius:10px; margin: 0 auto 10px auto; display:block;" />
+
+  <h3>Corpo Robusto</h3>
+  <p><strong>Custo:</strong>2 BP</p>
+  <p><strong>Efeito:</strong> Estende o tempo de invulnerabilidade após receber dano.</p>
+</div>
+
+
+               <div class="amulet">
+<img src="MISC/am7.png" alt="Amuleto"
+style="width:72px; height:72px; object-fit:contain; border-radius:10px; margin: 0 auto 10px auto; display:block;" />
+
+  <h3>Fôlego Selvagem</h3>
+  <p><strong>Custo:</strong>4 BP</p>
+  <p><strong>Efeito:</strong> Acelera a recuperação de stamina e reduz o custo do dash.</p>
+</div>
+
+
+               <div class="amulet">
+<img src="MISC/am8.png" alt="Amuleto"
+style="width:72px; height:72px; object-fit:contain; border-radius:10px; margin: 0 auto 10px auto; display:block;" />
+
+  <h3>Dor Reversa</h3>
+  <p><strong>Custo:</strong>2 BP</p>
+  <p><strong>Efeito:</strong> Libera uma onda cortante ao receber dano.</p>
+</div>
+
+
+               <div class="amulet">
+<img src="MISC/am9.png" alt="Amuleto"
+style="width:72px; height:72px; object-fit:contain; border-radius:10px; margin: 0 auto 10px auto; display:block;" />
+
+  <h3>Escudo dos Ecos</h3>
+  <p><strong>Custo:</strong>2 BP</p>
+  <p><strong>Efeito:</strong>Cria um escudo mágico que orbita ao redor, bloqueando projéteis e causando dano.</p>
+</div>
+
+
+               <div class="amulet">
+<img src="MISC/am10.png" alt="Amuleto"
+style="width:72px; height:72px; object-fit:contain; border-radius:10px; margin: 0 auto 10px auto; display:block;" />
+
+  <h3>Luz Persistente</h3>
+  <p><strong>Custo:</strong>4 BP</p>
+  <p><strong>Efeito:</strong>Recupera vida gradualmente.</p>
+</div>
+
+
+               <div class="amulet">
+<img src="MISC/am11.png" alt="Amuleto"
+style="width:72px; height:72px; object-fit:contain; border-radius:10px; margin: 0 auto 10px auto; display:block;" />
+
+  <h3>Ruína em Cadeia</h3>
+  <p><strong>Custo:</strong>3 BP</p>
+  <p><strong>Efeito:</strong>Gera uma explosão ao derrotar inimigos.</p>
+</div>
+
+
+               <div class="amulet">
+<img src="MISC/am12.png" alt="Amuleto"
+style="width:72px; height:72px; object-fit:contain; border-radius:10px; margin: 0 auto 10px auto; display:block;" />
+
+  <h3>Sopro de Midas</h3>
+  <p><strong>Custo:</strong>4 BP</p>
+  <p><strong>Efeito:</strong>Dobra o valor das moedas coletadas.</p>
+</div>
+
+
+               <div class="amulet">
+<img src="MISC/am13.png" alt="Amuleto"
+style="width:72px; height:72px; object-fit:contain; border-radius:10px; margin: 0 auto 10px auto; display:block;" />
+
+  <h3>Glória Marcial</h3>
+  <p><strong>Custo:</strong>2 BP</p>
+  <p><strong>Efeito:</strong>Aumenta o dano dos golpes carregados.</p>
+</div>
+
+
+               <div class="amulet">
+<img src="MISC/am14.png" alt="Amuleto"
+style="width:72px; height:72px; object-fit:contain; border-radius:10px; margin: 0 auto 10px auto; display:block;" />
+
+  <h3>Corte Firme</h3>
+  <p><strong>Custo:</strong>2 BP</p>
+  <p><strong>Efeito:</strong>Impede o recuo ao acertar um inimigo.</p>
+</div>
+
+
+               <div class="amulet">
+<img src="MISC/am15.png" alt="Amuleto"
+style="width:72px; height:72px; object-fit:contain; border-radius:10px; margin: 0 auto 10px auto; display:block;" />
+
+  <h3>Eco Arcano</h3>
+  <p><strong>Custo:</strong>3 BP</p>
+  <p><strong>Efeito:</strong>Aumenta o dano das magias.</p>
+</div>
+
+
+               <div class="amulet">
+<img src="MISC/am16.png" alt="Amuleto"
+style="width:72px; height:72px; object-fit:contain; border-radius:10px; margin: 0 auto 10px auto; display:block;" />
+
+  <h3>Ruptura Profunda</h3>
+  <p><strong>Custo:</strong>2 BP</p>
+  <p><strong>Efeito:</strong>Golpes aplicam dano contínuo.</p>
+</div>
+
+
+
+      </div>
+    </div>
+
+    <!-- BUILDS -->
+    <div class="card builds">
+      <h2>Sugestões de Builds para Teste</h2>
+      <ul>
+        <li><strong>Build Guerreiro (Core):</strong> Corte Absoluto (3 BP) + Glória Marcial (2 BP) + Ruptura Profunda (2 BP)</li>
+        <li><strong>Build Mago (Core):</strong> Eco Arcano (3 BP) + Ruína em Cadeia (3 BP) + Dor Reversa (2 BP)</li>
+        <li><strong>Build Muralha (Core):</strong> Primavera Interna (2 BP) + Corpo Robusto (2 BP) + Escudo dos Ecos (2 BP) + Luz Persistente (4 BP)</li>
+        <li><strong>Build Sonic (Core):</strong> Dança Rápida (3 BP) + Fôlego Selvagem (4 BP)</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer>
+    Apu's Journey - Playtest interno | Obrigado por ajudar no balanceamento
+  </footer>
+
+</body>
+</html>
